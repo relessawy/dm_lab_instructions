@@ -1,11 +1,11 @@
 Agenda
 ===
 * Use Case Overview
-* Business Object Model
-* Decisions Authoring
-* Decisions as a Service
-* Testing a Decision Service
-* Executing a Decision Service
+* Lab 1 Business Object Model
+* Lab 2 Decisions Authoring
+* Lab 3 Decisions as a Service
+* Lab 4 Testing a Decision Service
+* Lab 5 Executing a Decision Service
 
 <!-- # Use Case Review
 
