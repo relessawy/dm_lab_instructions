@@ -552,3 +552,184 @@ Let's check if the service you deployed is available.
 
 Congratulations! Now that you have deployed your first business application within the engine, let's learn how about how to automate tests of the rules you created in the Credit Card Dispute project.
 
+# Lab 4 Testing your Decision Service
+
+Now that you've created your Decision Service, and have deployed it on the Red Hat Process Automation Manager execution server, let's learn how we can test it.
+
+In this section you will:
+1. Learn how to create test scenarios to validate rules implementation;
+2. Learn how to execute test scenarios;
+3. Test the business application you deployed, by using an external app.
+
+# Introduction to test scenarios
+
+There are various ways in which you can test a Decision Service. It is a good practice to write test-cases for individual rules, groups of rules, and your entire service.
+
+These test-cases can be automatically executed when the code and rules of your service are compiled and packaged. This provides the guarantee that your service is tested properly before it's deployed into a production environment. It ensures that the logic that is executed and the decision that are made are correct and according to specification. Red Hat Process Automation Manager provides full support for these kind of testing scenarios.
+
+Red Hat Process Automation Manager contains a sophisticated _Test Scenario_ feature, in which you can build various test scenarios for your rules.
+
+## Test Scenario
+
+1. Go back to the project's `Asset Library` view. Click on the _Add Asset_ blue button. Select _Decision_ in the asset filter in the upper left of the screen, to filter out the decision assets.
+
+2. Select the `Test Scenario` tile. Give the scenario the name `risk-evaluation-tests` and set the package to `com.myspace.ccd_project`. Set the _Source Type_ to `Rule`.
+
+    ![Test Scenario Create](https://github.com/relessawy/dm_lab_instructions/blob/master/images/test-scenario-create.png)
+
+3. The scenario testing tool uses the concept in which _Given_ a specific set of input data, we _Expect_ a certain result. To implement our test scenario we therefore have to specify the input data of our rules (_Given_) and the results we expect our rules to produce for the given input data.
+
+4. In the editor, click on the _Data Objects_ tab. If everything is correct, there should be 3 data types listed: `AdditionalInformation`, `CreditCardHolder` and `FraudData`.
+
+5. Go back to the _Model_ tab. To test our rules, we need to provide the input data and the expected output. Our decision table operates on 2 datatypes, `CreditCardHolder` and `FraudData`. So let's start by creating a column for our `CreditCardHolder` in the _Given_ part of the scenario testing table. Click on the _INSTANCE 1_ cell in the table. On the right-hand-side of the editor, in the _Test Tools_ panel, expand the _Data Object_ `CreditCardHolder`, select the `status` field and click on the _Add_ button.
+
+    ![Test Scenario Add Given CCH Status](https://github.com/relessawy/dm_lab_instructions/blob/master/images/test-scenario-add-given-cch-status.png)
+
+    The column in the _Given_ section will be configured to represent that `status` field of the `CreditCardHolder` object.
+
+6. To add an additional column in the _Given_ section of the table, right-click on the _Given_ column and select `Insert column right`.
+
+    ![Test Scenario Given Insert Column Right](https://github.com/relessawy/dm_lab_instructions/blob/master/images/test-scenario-given-insert-column-right.png)
+
+7. Click on either the cell with the word `INSTANCE` or `PROPERTY`, and in the _Test Tools_ panel, expand _Data Object_ `FraudData`, and select the field `totalFraudAmount`. Click on the _Add_ button.
+
+8. Now that we have configured the 2 columns that define our input data, we can now configure the column in which we can set our expected result. Click on either the `INSTANCE` or `PROPERTY` cell in the `EXPECT` cell. In the _Test Tools_ panel on the right, expand the `FraudData` object, select the `disputeRiskRating` field, and click _Add_.
+
+    ![Test Scenario Table Configured](https://github.com/relessawy/dm_lab_instructions/blob/master/images/test-scenario-table-configured.png)
+
+9. With the table configured, we can now start adding our test-cases. Add a row with the following values:
+    - Given:
+        - CreditCardHolder.status: `Standard`
+        - FraudData.totalFraudAmount: `42`
+    - Expect:
+        - FraudData.disputeRiskRating: `0`
+
+    ![Test Scenario First Test](https://github.com/relessawy/dm_lab_instructions/blob/master/images/test-scenario-first-test.png)
+
+10. Run the test by click on the _Play_ button in the top menu (next to the _Close_ button). If everything is correct, the test will run and the result will be shown.
+
+11. Add some additional tests to complete your scenario tesing, for example:
+    - Given:
+        - CreditCardHolder.status: `Gold`
+        - FraudData.totalFraudAmount: `863`
+    - Expect:
+        - FraudData.disputeRiskRating: `1`
+
+    ![Test Scenario Two Test](https://github.com/relessawy/dm_lab_instructions/blob/master/images/test-scenario-two-tests.png)
+
+Feel free to try incorrect values to the expected column to check the behavior of the tooling.
+
+## Test via Web Application
+
+In the previous exercise, we used the _Test Scenario_ tooling to test the rules in our Credit Card Dispute project. Now we will test the deployed service via the REST API it exposes.
+
+In order to do that, let's use a simple web-application that we've provided for you. The application allows you to enter the data of the credit-card holder, and the data of the line item. The data is submitted to the Decision Server, which will calculate the risk of the transaction and determine whether the data can be automatically processed.
+
+![ReactJS App](https://github.com/relessawy/dm_lab_instructions/blob/master/images/reactjs-app.png)
+
+1. To access the application, go back to your OpenShift environment, and click on the `react-web-app` route to open it in a new tab:
+
+![ReactJS App Route](https://github.com/relessawy/dm_lab_instructions/blob/master/images/openshift-react-app-route.png)
+
+2. Once you've opened the react web app, enter the following details:
+
+  - **Name:** Jim
+  - **Age:** 52
+  - **Status:** Gold
+  - **Description:** Delta Airlines
+  - **Amount:** 1000
+  
+
+3. Next, click on the _Submit_ button. The application will send a RESTful request to the Decision Server. If everything is working correctly, the Decision Server will send a result that will be displayed in the application:
+
+![ReactJS App Request Response](https://github.com/relessawy/dm_lab_instructions/blob/master/images/reactjs-app-request-response.png)
+
+We can see that the `riskRating` has been set to **1** and the transaction is eligible for automated processing. Feel free to test your Decision Service with different values to see if all the use-cases you've implemented in your rules are covered.
+
+We have now successfully tested our decision service. In the next step we will take a closer look at the RESTful API exposed by the service, and we will see how we can test the services via the API documentation page.
+
+# Lab 5 Invoking your Decision Service
+
+In the previous step we've interacted with the Decision Service via a web-application. In this step we'll have a closer look at the RESTful API used in the communication between the web-application and the Decision Service. We will be using the Swagger API documentation for this.
+
+Swagger provides a standard way to describe and document RESTful APIs. The RESTful API of the PAM execution server allows other platforms, other applications, to easily communicate with the execution server using open standards.
+
+To access the Swagger page of the execution server, we first need to get the URL for the execution server.
+
+1. In the OpenShift console, open the `Topology` view of the `rhpam-userX` project. Click on the `rhpam7-kieserver` to open the engine in another tab.
+
+    ![Execution Server Route](https://github.com/relessawy/dm_lab_instructions/blob/master/images/kie-server-route.png)
+
+2. A new browser tab should open. Append to the end of the URL, `/docs`. TThe full URL will look soomething like http://insecure-rhpam7-kieserver-rhpam-user1.apps.cluster-rio-d6c5.rio-d6c5.example.opentlc.com/docs/. You will see the following page
+
+![KIE Server Swagger](https://github.com/relessawy/dm_lab_instructions/blob/master/images/kie-server-swagger.png)
+
+3. In this page, navigate to the section that says **KIE session assets**, and click on the green bar that says *POST /server/containers/instances/{containerId} Executes one or more runtime commands*. This will show the API description of this RESTful operation.
+
+4. Click on the *Try it out* button at the right of the panel, this will allow you to enter the values of the request.
+
+5. First we change the *Parameter content type* and the *Response content type* from `application/xml` to `application/json`. This specifies the data format that we will be using for our request and response. In this case this is the JSON format.
+
+![Swaggger Application JSON](https://github.com/relessawy/dm_lab_instructions/blob/master/images/.png)
+
+6. Next we need to specify the container-id that contains the deployment of the rules that we want to evaluate. The name of our container is `ccd-project_1.0.0-SNAPSHOT`{{copy}}.
+
+7. Finally, we provide the body of the request. In the body we pass the data, based on our domain model or business model, on which we evaluate the rules. Paste the following request body into the *body* text-area in the panel:
+
+```
+{  
+   "lookup":"ccd-ksession-stateless",
+   "commands":[  
+      {  
+         "insert":{  
+            "object":{  
+               "com.myspace.ccd_project.CreditCardHolder":{  
+                  "age":40,
+                  "status":"Gold"
+               }
+            },
+            "out-identifier":"ccholder",
+            "return-object":true,
+            "entry-point":"DEFAULT",
+            "disconnected":false
+         }
+      },
+      {  
+         "insert":{  
+            "object":{  
+               "com.myspace.ccd_project.FraudData":{  
+                  "totalFraudAmount":1000.0
+               }
+            },
+            "out-identifier":"frauddata",
+            "return-object":true,
+            "entry-point":"DEFAULT",
+            "disconnected":false
+         }
+      },
+      {  
+         "fire-all-rules":{  
+            "max":-1,
+            "out-identifier":null
+         }
+      }
+   ]
+}
+```
+
+We can see that we pass in the `FraudData`, with a `totalFraudAmount` of 1000.0. We also pass in the `CreditCardHolder` with a *Gold* status.
+
+8. After inputing the data above, click on the blue *Execute* button to fire the request.
+_If the browser asks for a username and password, use the same username/password you used to log into Business Central_
+
+![Swaggger Response](https://github.com/relessawy/dm_lab_instructions/blob/master/images/swagger-response.png)
+
+If all goes well, the decision service will reply with the following response:
+
+![Swaggger Response](https://github.com/relessawy/dm_lab_instructions/blob/master/images/swagger-response.png)
+
+Note that the rules have qualified this data for *automatic processing* and the risk has been set to *1*:
+
+Feel free to test the service with other values for the `CreditCardHolder` and `FraudData` and check the output.
+
+This concludes the testing of our service using REST API's to interact directly with the engine.
