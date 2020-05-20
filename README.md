@@ -79,11 +79,11 @@ So based on this development practice, the first and very important task when au
 
 1. You will see listed the 3 components: `rhpam7-rhpamcentr`, the `rhpam7-kieserver` and `react-web-app`. From this page, you can already find a link to open Business Central. Click on it to open Business Central in another tab.
 
-  ![PAM Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/topology-details.png){:width="600px"}
+  ![PAM Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/topology-details.png)
 
 1. Login to Business Central with the credentials u:`pamAdmin`, p:`redhatpam1!`
 
-  ![Business Central Console]({% image_path business-central-console.png %}){:width="600px"}
+  ![Business Central Console](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-console.png)
 
 1. Select _Design_ from the main menu. You will be redirected to your working space. You will see a list of _Spaces_, with a single space named _MySpace_.
 
@@ -91,7 +91,7 @@ So based on this development practice, the first and very important task when au
 
 1. Since this project is going to be used to deliver a case management implementation, we need to add a new `Case Project`. In order to do so, click on the arrow right next to the _Add Project_ button and select the option `Case Project`.
 
-  ![Business Central Asset CCD Project]({% image_path add-new-case-project.png %}){:width="600px"}
+  ![Business Central Asset CCD Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-new-case-project.png)
 
 1. When the _Add Project_ wizard opens up, type in
 
@@ -100,26 +100,26 @@ So based on this development practice, the first and very important task when au
 
   This project is your business boundary that encapsulates your business capability. Once the creation of your project is complete, you will see it in your space:
 
-  ![Business Central Asset CCD Project]({% image_path business-central-asset-ccd-project.png %}){:width="600px"}
+  ![Business Central Asset CCD Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-asset-ccd-project.png)
 
 1. Select the `ccd-project`. You should see the following page with the project content.
 
-    ![Business Central Asset Empty Project]({% image_path business-central-asset-empty-project.png %}){:width="600px"}
+    ![Business Central Asset Empty Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-asset-empty-project.png)
 
 1. Notice there's a blue button called `Add Asset`.  Click on the `Add Asset` button and you will be presented with a catalog of the wizards to create assets.An asset is a business resource of the project like Rules, Processes, Decision Tables, Data Objects, Data Forms, etc._
 
-    ![Business Central Asset Catalog]({% image_path business-central-asset-catalog.png %}){:width="600px"}
+    ![Business Central Asset Catalog](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-asset-catalog.png)
 
 1. Select the wizard for _Data Object_ from the catalog to create your business object model for the _Credit Card Holder_ enter the following and Click OK:
 
   * type `CreditCardHolder`{{copy}} as the name of the object sandbox
   * select `com.myspace.ccd_project` as the Package.
 
-    ![Business Central CCD Object]({% image_path business-central-CCD-object-new.png %}){:width="600px"}
+    ![Business Central CCD Object](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-CCD-object-new.png)
 
 1. You will see the new created object with no properties, lets click on the `+add field` button to start adding the properties to our CreditCardHolder data object.
 
-    ![Business Central CCD Object New Empty]({% image_path business-central-CCD-object-new-empty.png %}){:width="600px"}
+    ![Business Central CCD Object New Empty](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-CCD-object-new-empty.png)
 
 1. In the _New Field_ window, enter the following values and click on _Create_:
 
@@ -127,7 +127,7 @@ So based on this development practice, the first and very important task when au
     - Label: `Age`
     - Type: `Integer`
 
-    ![Business Central CCD Object New Properties]({% image_path business-central-CCD-object-new-properties.png %}){:width="600px"}
+    ![Business Central CCD Object New Properties](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-CCD-object-new-properties.png)
 
 The first step to automate a process or decision is to define and specify the Business Object Model. In this exercise you've created the Entity `CreditCardHolder` and defined it's `age` field. These entities will be used to store the information that you need to make decisions and drive process execution.
 
@@ -143,11 +143,11 @@ In order to do this, let's delete the `ccd-project` project and learn how to imp
 
   2. At the top of the screen under the main heading, click the _ccd-project_ to bring you back to the homepage for the project
 
-  ![Business Central Breadcrumb bar ccd project]({% image_path business-central-breadcrumb-bar-ccd-project.png %}){:width="600px"}
+  ![Business Central Breadcrumb bar ccd project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-breadcrumb-bar-ccd-project.png)
 
   2. Delete the project by clicking the hamburger menu & selecting _Delete Project_
 
-  ![Business Central Delete CCD Project]({% image_path business-central-delete-ccd-project.png %}){:width="600px"}
+  ![Business Central Delete CCD Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-delete-ccd-project.png)
 
   3. Type in _ccd-project_ and click `Delete Project`
   4. If asked you can `Discard unsaved changes and proceed`.
@@ -162,7 +162,7 @@ Let's import the project with all the Data Objects relative to the Domain Model:
 
   3. On the _Import Projects_ screen, select the _ccd-project_ and click `Ok`
 
-  ![Business Central Delete CCD Project]({% image_path business-central-import-ccd-project.png %}){:width="600px"}
+  ![Business Central Delete CCD Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-import-ccd-project.png)
 
   4. Examine the other newly-imported entities
 
@@ -220,11 +220,11 @@ A very common way to define the logic behind risk assessment is to store this in
 
 1. First, go back to the Library view and click on the blue `Add Asset` button in the top right corner.
 
-    ![Business Central Decision Table Add Asset]({% image_path business-central-decision-table-add-asset.png %}){:width="600px"}
+    ![Business Central Decision Table Add Asset](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-add-asset.png)
 
 2. Select `Guided Decision Table` from the catalog of assets (the UI allows you to filter the assets per type by using the filter drop-down and input box in the upper-left of the screen. Select `Decisions` to filter on decision assets).
 
-    ![Business Central Decision Table Add Asset Guided]({% image_path business-central-decision-table-add-asset-guided.png %}){:width="600px"}
+    ![Business Central Decision Table Add Asset Guided](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-add-asset-guided.png)
 
 3. Type the following values on the `Create New Guided Decision Table` wizard
 
@@ -235,7 +235,7 @@ A very common way to define the logic behind risk assessment is to store this in
 
 4. You should see the `Guided Decision Table` editor with an empty table.
 
-    ![Business Central Decision Table New]({% image_path business-central-decision-table-new.png %}){:width="600px"}
+    ![Business Central Decision Table New](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-new.png)
 
     There are 5 tabs in the editor:
 
@@ -254,32 +254,32 @@ Let's add the Credit Card Holder condition column.
 
 5. Go to the _Columns_ tab and click on the button `Insert Column`, select `Add Condition` and click Next.
 
-    ![Business Central Add Condition]({% image_path business-central-add-condition.png %}){:width="600px"}
+    ![Business Central Add Condition](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-add-condition.png)
 
 6. You need to define which object is going to be evaluated. Click on `Create new Fact Pattern`. Select `CreditCardHolder` as the _Fact type_ and define a variable called `holder` as the _Binding_. Click _Ok_ to dismiss the fact pattern dialog, then click _Next_.
 
-    ![Business Central Create Pattern]({% image_path business-central-create-pattern.png %}){:width="600px"}
+    ![Business Central Create Pattern](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-create-pattern.png)
 
 7. The calculation type is the type of evaluation that you are going to apply. In this case it will be against literal values. Select `Literal value` and click _Next_.
 
 8. You need to define a constraint on the card holder's status, so select the `status` field and click _Next_.
 
-    ![Business Central Create Pattern Field]({% image_path business-central-create-pattern-field.png %}){:width="600px"}
+    ![Business Central Create Pattern Field](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-create-pattern-field.png)
 
 9. Next, select the operator for the constraint. Select `equal to` from the drop down menu and click _Next_.
 
-    ![Business Central Create Pattern Field Operator]({% image_path business-central-create-pattern-field-operator.png %}){:width="600px"}
+    ![Business Central Create Pattern Field Operator](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-create-pattern-field-operator.png)
 
 10. Since there are only 3 possible statuses, you are going to configure the fields with the values below and then click _Next_.
 
     - the _Value list_ with the following values: `Standard,Silver,Gold`
     - The _Default value_ to `Standard`
 
-    ![Business Central Create Pattern Field Values]({% image_path business-central-create-pattern-field-values.png %}){:width="600px"}
+    ![Business Central Create Pattern Field Values](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-create-pattern-field-values.png)
 
 11. You can now configure the header of the column `Header`: `Status`.
 
-    ![Business Central Create Pattern Field Header]({% image_path business-central-create-pattern-field-header.png %}){:width="600px"}
+    ![Business Central Create Pattern Field Header](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-create-pattern-field-header.png)
 
 12. Click Finish and go back to the `Model` tab in the editor. You should see the newly created column.
 
@@ -298,7 +298,7 @@ Let's add the Credit Card Holder condition column.
 
     At the end your decision table should look like this:
 
-    ![Business Central Decision Table Columns]({% image_path business-central-decision-table-columns.png %}){:width="600px"}
+    ![Business Central Decision Table Columns](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-columns.png)
 
 13. Click on the _Save_ button to save the decision table.
 
@@ -306,11 +306,11 @@ Let's add the Credit Card Holder condition column.
 
 15. Set the risk scoring property of the `FraudData` object. So in the dropdown menu select the object `FraudData` bound to the variable `data`.Click Next.
 
-    ![Business Central Decision Table Columns Action Data]({% image_path business-central-decision-table-columns-action-data.png %}){:width="600px"}
+    ![Business Central Decision Table Columns Action Data](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-columns-action-data.png)
 
 16. Select the field `disputeRiskRating` and click Next. You don't have a list of values so click Next. Type `Risk Scoring` as the header for the column and click Finish.
 
-    ![Business Central Decision Table Columns Action Data Finish]({% image_path business-central-decision-table-columns-action-data-finish.png %}){:width="600px"}
+    ![Business Central Decision Table Columns Action Data Finish](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-columns-action-data-finish.png)
 
 17. Click on the _Save_ button to save the decision table.
 
@@ -322,7 +322,7 @@ Let's add the Credit Card Holder condition column.
 
 19. Click on the button Insert and select append row from the dropdown menu.
 
-     ![Business Central Decision Table Columns Action Data Finish Model]({% image_path business-central-decision-table-append-row.png %}){:width="600px"}
+     ![Business Central Decision Table Columns Action Data Finish Model](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-append-row.png)
 
 20. Click on the _Description_ cell of the new row and type "_Standard customer low risk_". Use the following values for the other columns:
 
@@ -334,7 +334,7 @@ Let's add the Credit Card Holder condition column.
 
     Your decision table should look like this. Click Save.
 
-    ![Business Central Decision Table First Row]({% image_path business-central-decision-table-first-row.png %}){:width="600px"}
+    ![Business Central Decision Table First Row](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-first-row.png)
 
 21. Based on the business rules, apply the same procedure for the rest of it.
 
@@ -350,7 +350,7 @@ Let's add the Credit Card Holder condition column.
 
   At the end your decision table should look as follows:
 
-  ![Business Central Decision Complete]({% image_path business-central-decision-table-complete.png %}){:width="600px"}
+  ![Business Central Decision Complete](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-complete.png)
 
 20. Save the table once you finish.
 
@@ -373,15 +373,15 @@ To create the rule:
 
 1. At the top of the screen under the main heading, click the _ccd-project_ to bring you back to the homepage for the project
 
-    ![Business Central Breadcrumb bar ccd project]({% image_path business-central-breadcrumb-bar-ccd-project.png %}){:width="600px"}
+    ![Business Central Breadcrumb bar ccd project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-breadcrumb-bar-ccd-project.png)
 
 2. Click on the blue button `Add Asset` on the right upper corner of the Library View.
 
-    ![Business Central CCD BOM Project]({% image_path business-central-ccd-bom-project.png %}){:width="600px"}
+    ![Business Central CCD BOM Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-ccd-bom-project.png)
 
 3. In the _Add Asset_ screen, select _Decision_ from the drop-down filter menu to filter on decision assets.
 
-    ![Business Central Add Assets Filter]({% image_path business-central-add-assets-filter.png %}){:width="600px"}
+    ![Business Central Add Assets Filter](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-add-assets-filter.png)
 
 4. Select `Guided Rule` from the filtered catalog of Wizards.
 
@@ -390,47 +390,46 @@ To create the rule:
     - Name: `automated-chargeback`
     - Package: `com.myspace.ccd_project`
 
-    ![Business Central Guided Rule New]({% image_path business-central-guided-rule-new.png %}){:width="600px"}
+    ![Business Central Guided Rule New](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new.png)
 
 6. Click ok. You should see a banner in green telling you that the asset was success fully created. The UI will display the editor that allows you to author your rule.
 
-    ![Business Central Guided Rule New Wizard]({% image_path business-central-guided-rule-new-wizard.png %}){:width="600px"}
+    ![Business Central Guided Rule New Wizard](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new-wizard.png)
 
 7. You will see 4 tabs in the editor panel. Select the tab that says "Data Objects"
 
-    ![Business Central Guided Rule Import Data Object]({% image_path business-central-guided-rule-import-data-object.png %}){:width="600px"}
+    ![Business Central Guided Rule Import Data Object](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-import-data-object.png)
 
 8. You should see 4 items listed: `AdditionalInformation`, `CreditCardHolder`, `FraudData`, and `Number`. These are shown by default as the rule is created in the same folder/package as these data objects. If `CreditCardHolder` is not listed, click on the blue _New Item_ button to import it.
 
-    ![Business Central Guided Rule Import Data Object New]({% image_path business-central-guided-rule-import-data-object-new.png %}){:width="600px"}
-
+    ![Business Central Guided Rule Import Data Object New](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-import-data-object-new.png)
 9. Return to the _Model_ tab and Click on the green plus-sign to the right of the word _WHEN_.
 
-    ![Business Central Guided Rule New Fact]({% image_path business-central-guided-rule-new-fact.png %}){:width="600px"}
+    ![Business Central Guided Rule New Fact](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new-fact.png)
 
 10. Select the object `CreditCardHolder`, and click ok. You are now telling the rule engine that every time there is a CreditCardHolder this rule needs to be activated.
 
-    ![Business Central Guided Rule New Fact Select]({% image_path business-central-guided-rule-new-fact-select.png %}){:width="600px"}
+    ![Business Central Guided Rule New Fact Select](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new-fact-select.png)
 
     In order to match the criteria of the functional requirement, you need to add a restriction on one of the card holder's properties. Automated chargeback is only approved for CC Holders that have the `status` _Gold_ or _Platinum_.
 
 11. Click on the condition `There is a Credit Card Holder`, a new wizard will open. You now _Add a restriction on a field_. From the dropdown box select the `status` field of the CC Holder.
 
-    ![Business Central Guided Rule New Property Select]({% image_path business-central-guided-rule-new-property-select.png %}){:width="600px"}
+    ![Business Central Guided Rule New Property Select](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new-property-select.png)
 
 12. From the dropdown box select that the status `is contained in the (comma separated) list`. Click on the pencil icon and add the literal values  _Gold_ and _Platinum_, separated by a comma. TIP: You can also add enumerations containing these values to have them pre-populated for you. Click on the _Save_ button to save the asset.
 
-    ![Business Central Guided Rule New Property Select Values]({% image_path business-central-guided-rule-new-property-select-values.png %}){:width="600px"}
+    ![Business Central Guided Rule New Property Select Values](https://github.com/relessawy/dm_lab_instructions/blob/master/images/image_path business-central-guided-rule-new-property-select-values.png)
 
 13. Go back to the _Data Objects_ tab. If the `FraudData` data object has not been imported yet, complete the same procedure, to import it. Go back to the _Model_ tab and add a constraint on the `FraudData` object the same way as you did before. You don't need to put a constraint on any property of the `FraudData`. Instead, you just need to make sure that it's there.
 
-    ![Business Central Guided Rule Check Fraud Data]({% image_path business-central-guided-rule-check-fraud-data.png %}){:width="600px"}
+    ![Business Central Guided Rule Check Fraud Data](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-check-fraud-data.png)
 
 14. When you want to modify the data in the objects of the Business Model or facts, you need to be able to reference the matched object from within the rule. To allow this, the object needs to be bound to a variable inside the rule. This makes the object accessible in both the left-hand-side (LHS) and  right-hand-side (RHS) through the variable. Click on the fact declaration `There is FraudData`, the wizard to modify the constraints will open.
 
 15. In the _Variable name_ field at the bottom of the form, type `data` as the name of the variable that you want to bind the `FraudData` object to. Click on the _Set_ button. Save the asset.
 
-    ![Business Central Guided Rule Modify Fraud Data]({% image_path business-central-guided-rule-modify-fraud-data.png %}){:width="600px"}
+    ![Business Central Guided Rule Modify Fraud Data](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-modify-fraud-data.png)
 
   Now set the property of automated chargeback to true on the `FraudData` object, so the dispute can be processed accordingly. Since this is the decision you are making, and thus the _action_ of the rule, you define this as the THEN clause,  also known as the Right Hand Side (RHS) or Action section of our rule.
 
@@ -438,23 +437,23 @@ To create the rule:
 
 1. Click on the green plus-sign next to the _THEN_ keyword.
 
-  ![Business Central Guided Rule New Then Condition]({% image_path business-central-guided-rule-new-then-condition.png %}){:width="600px"}
+  ![Business Central Guided Rule New Then Condition](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new-then-condition.png)
 
 2. When the `Add new action` wizard opens select `Change field values of data` and click on _OK_. This will automatically select the `FraudData` object, as this is the only object that has been bound to a variable.
 
-  ![Business Central Guided Rule Modify Fraud Data Wizard]({% image_path business-central-guided-rule-modify-fraud-data-wizard.png %}){:width="600px"}
+  ![Business Central Guided Rule Modify Fraud Data Wizard](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-modify-fraud-data-wizard.png )
 
 3. Now set the value of the property `automated` to `true`, indicating that an automatic chargeback applies. Click on the action `Set value of FraudData [data]` and select the field `automated`. Click on the pencil icon to the right and assign a literal value to the property.
 
-    ![Business Central Guided Rule Modify Fraud Automated]({% image_path business-central-guided-rule-modify-fraud-automated.png %}){:width="600px"}
+    ![Business Central Guided Rule Modify Fraud Automated](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-modify-fraud-automated.png)
 
 4. Select `true` as the value for the automated property (this is the default value for booleans, so the property is probably already set to `true`). Note that since the type of data is `boolean`, you can only choose between `true` and `false`.
 
-    ![Business Central Guided Rule Modify Fraud Automated True]({% image_path business-central-guided-rule-modify-fraud-automated-true.png %}){:width="600px"}
+    ![Business Central Guided Rule Modify Fraud Automated True](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-modify-fraud-automated-true.png)
 
 5. To validate that everything is correct, click on the _Validate_ button on the top navigation bar and you should see a green "Item successfully validated!" message.
 
-    ![Business Central Guided Rule Validate]({% image_path business-central-guided-rule-validate.png %}){:width="600px"}
+    ![Business Central Guided Rule Validate](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-validate.png)
 
 6.  Finally, click on _Save_ to save the rule.
 
@@ -478,21 +477,21 @@ Let's start by having an overview of assets versioning with Business Central.
 
 As you can notice on the diagram below, Red Hat Process Automation Manager is a modular platform to develop and run decisions and processes. Until now we have mostly used **Business Central** workbench to develop rules and business models. All the assets that you create or alter using Business Central are versioned in a repository (a Git-based version control system).
 
-![RHPAM 7 Architecture]({% image_path rhpam-7-architecture.png %}){:width="600px"}
+![RHPAM 7 Architecture](https://github.com/relessawy/dm_lab_instructions/blob/master/images/rhpam-7-architecture.png)
 
 Business Central automatically versions our code within git-based repository, and it also provides a way for us to check the changes and rollback to previous versions necessary.
 
 1. Go to your project library view and select the automated-chargeback rule. Once the editor opens click on the button Latest Version. (**NOTE:** If you re-imported the project then there is probably only 1 version listed).
 
-  ![Business Central Chargeback Versions]({% image_path business-central-chargeback-versions.png %}){:width="600px"}
+  ![Business Central Chargeback Versions](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-chargeback-versions.png)
 
 2. There is also more metadata about your assets stored in the repository, like the name of the user that created the asset, the time and data when it was last modified, etc.
 
-  ![Business Central Chargeback Versions Detail]({% image_path business-central-chargeback-versions-detail.png %}){:width="600px"}
-
+  ![Business Central Chargeback Versions Detail](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-chargeback-versions-detail.png)
+  
 3. Click on any of the versions in the dropdown box and you will see the version of the asset tagged.
 
-  ![Business Central Chargeback Version]({% image_path business-central-chargeback-version.png %}){:width="600px"}
+  ![Business Central Chargeback Version](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-chargeback-version.png)
 
 ## Understanding the deployment process
 
@@ -523,13 +522,13 @@ Let's check your Process Server using Business Central.
 
 2. Click on _Deploy_. This will open the _Server Configurations_ perspective. Notice which capabilities you have enabled for your Process Server.
 
-![Business Central Process Server Server Configurations]({% image_path business-central-server-configuration.png %}){:width="600px"}
+![Business Central Process Server Server Configurations](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-server-configuration.png)
 
 2. Return to the Home screen and select _Design_. Select `MySpace`, next, select your Credit Card Dispute project (`ccd-project`). The Library view should open with a list of all your assets. These assets will be compiled and packaged inside a _KJAR_, a _Deployment Unit_.
 
 3. Click on the _Deploy_ button in the top right corner.
 
-    ![Business Central Deploy]({% image_path business-central-deploy.png %}){:width="600px"}
+  ![Business Central Deploy](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-deploy.png )
 
 You will see that the project is first built, meaning the assets are compiled and packaged, and then deployed to a Execution Server container. Go back to the Home screen and elect Deploy. You will now see a container running with your newly created decisions.
 
@@ -541,13 +540,13 @@ Let's check if the service you deployed is available.
 
 2. Click on the URL of the container, and a new tab should open:
 
-  ![Business Central Execution Services Detail]({% image_path business-central-execution-services-detail.png %}){:width="600px"}
+  ![Business Central Execution Services Detail](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-execution-services-detail.png)
 
 3. You may also be prompted for credentials. Use the same credentials you used to log into the Business Central console.
   - user: `pamAdmin`
   - password: `redhatpam1!`
 
-![Business Central Execution Services Info]({% image_path business-central-execution-services-info.png %}){:width="600px"}
+![Business Central Execution Services Info](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-execution-services-info.png)
 
 4. Notice the Process Service responds with details about the `Kie Container` where your `Deployment Unit` is running.
 
