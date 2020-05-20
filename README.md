@@ -1,3 +1,12 @@
+Agenda
+===
+* Use Case Overview
+* Business Object Model
+* Decisions Authoring
+* Decisions as a Service
+* Testing a Decision Service
+* Executing a Decision Service
+
 <!-- # Use Case Review
 
 The Credit Card Dispute process is not straightforward. It involves different actors inside, and outside of, the company. These actors need to have visibility and control at all times into what is happening during the processing of each dispute.
