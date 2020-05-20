@@ -74,13 +74,12 @@ So based on this development practice, the first and very important task when au
   - password: `openshift`{{copy}}
 
 ![OpenShift Console](https://github.com/relessawy/dm_lab_instructions/blob/master/images/openshift-console.png)
-  ![OpenShift Console]({% /images/openshift-console.png %}){:width="600px"}
-
+ 
 1. Make sure you are on the `Developer` perspective and that you have the `rhpam-userX` project selected. On the left menu, select the `Topology` option.
 
 1. You will see listed the 3 components: `rhpam7-rhpamcentr`, the `rhpam7-kieserver` and `react-web-app`. From this page, you can already find a link to open Business Central. Click on it to open Business Central in another tab.
 
-  ![PAM Project]({% image_path topology-details.png %}){:width="600px"}
+  ![PAM Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/image_path topology-details.png){:width="600px"}
 
 1. Login to Business Central with the credentials u:`pamAdmin`, p:`redhatpam1!`
 
