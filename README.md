@@ -73,6 +73,7 @@ So based on this development practice, the first and very important task when au
   - user: `userX`{{copy}}
   - password: `openshift`{{copy}}
 
+![OpenShift Console](https://github.com/relessawy/dm_lab_instructions/blob/master/images/openshift-console.png)
   ![OpenShift Console]({% /images/openshift-console.png %}){:width="600px"}
 
 1. Make sure you are on the `Developer` perspective and that you have the `rhpam-userX` project selected. On the left menu, select the `Topology` option.
