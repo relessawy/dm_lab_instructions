@@ -7,7 +7,7 @@ Agenda
 * Testing a Decision Service
 * Executing a Decision Service
 
-<!-- # 1 Use Case Review
+<!-- # Use Case Review
 
 The Credit Card Dispute process is not straightforward. It involves different actors inside, and outside of, the company. These actors need to have visibility and control at all times into what is happening during the processing of each dispute.
 
@@ -23,7 +23,7 @@ So far we can identify 3 major external entities:
 
 The difference between these entities and the Actors is that these entities are the ones that contains data that is relevant to the processing of the dispute. This data will come from different actors and will be stored in the dispute process instance as process variables. -->
 
-# 1 Use Case Overview
+# Use Case Overview
 
 You are a business automation specialist consultant who was hired by a credit card issuer company, Pecunia Corp. Your task now is to automate the decisions and rules of a _Credit Card Dispute_ process.
 
@@ -48,7 +48,7 @@ You should also consider that the user can change the criteria without technical
 
 Make sure you also deliver automated tests for your rules.
 
-# 2 Business Object Model
+# Lab 1 Business Object Model
 
 In this section you will learn
 
@@ -168,7 +168,7 @@ Let's import the project with all the Data Objects relative to the Domain Model:
 
 Congratulations, now you that we've seen how to define Data Objects, we can now start working with the automation of our business rules and decisions!
 
-# 3 Authoring Decisions and Rules
+# Lab 2 Authoring Decisions and Rules
 
 In this section you will learn:
 
