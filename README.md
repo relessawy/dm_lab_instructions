@@ -782,15 +782,17 @@ employees with at least 30 years of service will receive 5 extra days
 
 Note that the **hit-policy** of the decision table is by default set to `U`, which means `Unique`. This implies that only one rule is expected to fire for a given input. In this case however, we would like to set it to `Collect Max`, as, for a given input, multiple decisions might match, but we would like to collect the output from the rule with the highest number of additional vacation days. To do this, click on the `U` in the upper-left corner of the decision table. Now, set the **Hit Policy** to `Collect` and the **Builtin Aggregator** to `MAX`.
 
-image:images/decision-table-hit-policy.png[Decision Table Hit Policy]
- [start=6]
- . Finally, we need to set the default result of the decision. This is the result that will be returned when none of the rules match the given input. This is done as follows:
- .. Select the output/result column of the decision table. In this case this is the column `Extra days case 1`
- .. Open the properties panel on the right-side of the editor.
- .. Expand the **Default output** section.
- .. Set the `Default output property` to `0`.
- image:images/decision-table-default-output.png[Decision Table Default Output]
- . Save the model
+![Decision Table Hit Policy](https://github.com/relessawy/dm_lab_instructions/blob/master/images/decision-table-hit-policy.png)
+ 
+Finally, we need to set the default result of the decision. This is the result that will be returned when none of the rules match the given input. This is done as follows:
+- Select the output/result column of the decision table. In this case this is the column `Extra days case 1`
+- Open the properties panel on the right-side of the editor.
+- Expand the **Default output** section.
+- Set the `Default output property` to `0`.
+
+![Decision Table Default Output](https://github.com/relessawy/dm_lab_instructions/blob/master/images/decision-table-default-output.png)
+
+Save the model
 
 The other two decisions can be implemented in the same way. Simply implement the following two decision tables:
 
