@@ -282,48 +282,54 @@ Let's add the Credit Card Holder condition column.
 
 12. Click Finish and go back to the `Model` tab in the editor. You should see the newly created column.
 
-13. Repeat the same steps to add 2 more columns:
+13. Now lets create the "Minimum Amount" column, Ggo to the _Columns_ tab and click on the button `Insert Column`, select `Add Condition` and click Next.
 
-    - Pattern:
-        - Fact type: `FraudData`
-        - Binding: `data`
-    - Calculation Type: `Literal value`
-    - property: `totalFraudAmount`
-    - operation:
-        - `greater than or equal to` for one column. Use header name: "Minimum Amount"
-        - `less than` for the second column. Use header nam "Maximum Amount"
+14. Click on `Create new Fact Pattern`. Select `FraudData` as the _Fact type_ and define a variable called `data` as the _Binding_. Click _Ok_ to dismiss the fact pattern dialog, then click _Next_.
 
-    Note that for the second column you don't need to create a new fact pattern, you can reuse the existing one.
+15. Set the Calculation type to `Literal value` and click _Next_.
+
+16. Select the `totalFraudAmount` field and click _Next_.
+
+17. Next, select the operator for the constraint. Select `greater than or equal to` from the drop down menu and click _Next_.
+
+18. Leave the value list empty and click _Next_.
+
+19. Set the column header to "Minimum Amount" and click _Finish_.
+
+20. Repeat steps 13 to 19 to create the "Maximum Amount" column. The only differences are 
+    - You don't need to create a new Fact Pattern, just re-use "Fraud Data" (Step 14)
+    - The Operation will be `less than` (Step 17)
+    - The header will be "Maximum Amount" (Step 19)
 
     At the end your decision table should look like this:
 
     ![Business Central Decision Table Columns](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-columns.png)
 
-13. Click on the _Save_ button to save the decision table.
+21. Click on the _Save_ button to save the decision table.
 
-14. Next go to the `Columns` tab and Click on `Insert Column`. This time you add an Action, the Right-Hand-Side of a rule. This action will be fired when the conditions are met. Select `Set the value of a field` and click next.
+22. Next go to the `Columns` tab and Click on `Insert Column`. This time you add an Action, the Right-Hand-Side of a rule. This action will be fired when the conditions are met. Select `Set the value of a field` and click next.
 
-15. Set the risk scoring property of the `FraudData` object. So in the dropdown menu select the object `FraudData` bound to the variable `data`.Click Next.
+23. Set the risk scoring property of the `FraudData` object. So in the dropdown menu select the object `FraudData` bound to the variable `data`.Click Next.
 
     ![Business Central Decision Table Columns Action Data](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-columns-action-data.png)
 
-16. Select the field `disputeRiskRating` and click Next. You don't have a list of values so click Next. Type `Risk Scoring` as the header for the column and click Finish.
+24. Select the field `disputeRiskRating` and click Next. You don't have a list of values so click Next. Type `Risk Scoring` as the header for the column and click Finish.
 
     ![Business Central Decision Table Columns Action Data Finish](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-columns-action-data-finish.png)
 
-17. Click on the _Save_ button to save the decision table.
+25. Click on the _Save_ button to save the decision table.
 
-18. Go back to your `Model` tab. You are now going to add the actual constraints and actions, i.e. the actual rules. Looking at our requirements, the first constraint is defined as:
+26. Go back to your `Model` tab. You are now going to add the actual constraints and actions, i.e. the actual rules. Looking at our requirements, the first constraint is defined as:
 
   _For a standard customer, and a dispute amount between 0 and 100, the risk is low._
 
   There are 4 levels of risk: low, medium, high and very-high. You will define these risk-levels as integers: 1,2,3, and 4.
 
-19. Click on the button Insert and select append row from the dropdown menu.
+27. Click on the button Insert and select append row from the dropdown menu.
 
      ![Business Central Decision Table Columns Action Data Finish Model](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-append-row.png)
 
-20. Click on the _Description_ cell of the new row and type "_Standard customer low risk_". Use the following values for the other columns:
+28. Click on the _Description_ cell of the new row and type "_Standard customer low risk_". Use the following values for the other columns:
 
      - Description:`Standard customer low risk` 
      - Status:`Standard` 
@@ -335,7 +341,7 @@ Let's add the Credit Card Holder condition column.
 
     ![Business Central Decision Table First Row](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-first-row.png)
 
-21. Based on the business rules, apply the same procedure for the rest of it.
+29. Based on the business rules, apply the same procedure for the rest of it.
 
   - Standard customer 0-100: low risk (Risk scoring = 0)
   - Standard customer 100-500: medium risk (Risk scoring = 1)
@@ -351,7 +357,7 @@ Let's add the Credit Card Holder condition column.
 
   ![Business Central Decision Complete](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-decision-table-complete.png)
 
-20. Save the table once you finish.
+30. Save the table once you finish.
 
 
 ## Guided Rules
