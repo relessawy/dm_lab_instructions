@@ -666,7 +666,7 @@ To define and deploy a DMN decision model, we first need to create a new project
 
 - Click on the **home button -> Design -> MySpace**
 - Click on the blue **Add project** button at the top right of the page
-- Give the project the name `vacation-days-decisions`, and the description `Vacation Days Decisions`.
+- Give the project the name `vacation-days-decisions`, and the description `Vacation Days Decisions` and click the **Add Button**.
 
 ![Create Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-project-vacation-days-decisions.png)
 
@@ -692,19 +692,16 @@ The DMN Editor consists of a number of components:
 * **Property Panel**: provides access to the properties of the model (name, namespace, etc), nodes, etc.
 * **Data Types**: allows the user to define (complex) datatypes.
 
-image:images/dmn-editor-components.jpg[DRD]
+![DRD](https://github.com/relessawy/dm_lab_instructions/blob/master/images/dmn-editor-components.jpg)
 
-image:images/dmn-editor-decision-table.jpg[Boxed Expressions]
+![Boxed Expressions](https://github.com/relessawy/dm_lab_instructions/blob/master/images/dmn-editor-decision-table.jpg)
 
-image:images/dmn-editor-datatypes.jpg[Data Types]
+![Data Types](https://github.com/relessawy/dm_lab_instructions/blob/master/images/dmn-editor-datatypes.jpg)
 
 
-== Solution
+## Solution
 
-You can do this lab in 2 ways:
-
-. If you already have (some) DMN knowledge, we would like to challenge you to build the solution by yourself. After you've built solution, you can verify your answer by going to the next module in which we will explain the solution and will deploy it onto the runtime.
-. Follow this step-by-step guide which will guide you through the implementation.
+Follow this step-by-step guide which will guide you through the implementation.
 
 .Input Nodes
 
