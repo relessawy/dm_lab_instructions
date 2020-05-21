@@ -664,25 +664,24 @@ In this lab we will create a decision that determines the number of vacation day
 ## Create a Decision Project
 To define and deploy a DMN decision model, we first need to create a new project in which we can store the model. To create a new project 
 
-- Click on the home button -> Design -> MySpace
-- Click on the blue Add project button at the top right of the page
-- Give the project the name `vacation-days-decisions`, and the description "Vacation Days Decisions".
+- Click on the **home button -> Design -> MySpace**
+- Click on the blue **Add project** button at the top right of the page
+- Give the project the name `vacation-days-decisions`, and the description `Vacation Days Decisions`.
 
-![Create Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-project-vacation-days-decisions.png]
-
-[start=6]
-. With the project created, we can now create our DMN model. Click on the blue **Add Asset** button.
-. In the **Add Asset** page, select **Decision** in the dropdown filter selector.
-
-image:images/new-asset-decisions-filter.png[]
-
-[start=8]
-. Click on the **DMN** tile to create a new DMN model. Give it the name `vacation-days`. This will create the asset and open the DMN editor.
-
-image:images/add-dmn-vacation-days.png[]
+![Create Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-project-vacation-days-decisions.png)
 
 
-== DMN Editor
+With the project created, we can now create our DMN model. Click on the blue **Add Asset** button.
+In the **Add Asset** page, select **Decision** in the dropdown filter selector.
+
+![New Asset](https://github.com/relessawy/dm_lab_instructions/blob/master/images/new-asset-decisions-filter.png)
+
+Click on the **DMN** tile to create a new DMN model. Give it the name `vacation-days`. This will create the asset and open the DMN editor.
+
+![Vacation Days](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-dmn-vacation-days.png)
+
+
+## DMN Editor
 
 The DMN Editor consists of a number of components:
 
