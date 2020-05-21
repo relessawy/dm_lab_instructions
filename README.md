@@ -424,7 +424,7 @@ To create the rule:
 
 12. From the dropdown box select that the status `is contained in the (comma separated) list`. Click on the pencil icon and add the literal values  _Gold_ and _Platinum_, separated by a comma. TIP: You can also add enumerations containing these values to have them pre-populated for you. Click on the _Save_ button to save the asset.
 
-    ![Business Central Guided Rule New Property Select Values](https://github.com/relessawy/dm_lab_instructions/blob/master/images/image_path business-central-guided-rule-new-property-select-values.png)
+![Business Central Guided Rule New Property Select Values](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-guided-rule-new-property-select-values.png)
 
 13. Go back to the _Data Objects_ tab. If the `FraudData` data object has not been imported yet, complete the same procedure, to import it. Go back to the _Model_ tab and add a constraint on the `FraudData` object the same way as you did before. You don't need to put a constraint on any property of the `FraudData`. Instead, you just need to make sure that it's there.
 
