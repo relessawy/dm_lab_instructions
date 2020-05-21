@@ -5,8 +5,7 @@ Agenda
 * Lab 2 Decisions Authoring
 * Lab 3 Decisions as a Service
 * Lab 4 Testing a Decision Service
-* Lab 5 Executing a Decision Service
-* Lab 6 Decision Model & Notation
+* Lab 5 Decision Model & Notation
 
 <!-- # Use Case Review
 
@@ -157,7 +156,7 @@ Let's import the project with all the Data Objects relative to the Domain Model:
 
   1. Click the `Import Project` button;
 
-  2. On the pop-up, enter [https://github.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m2-labs-step-2.git](https://github.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m2-labs-step-2.git) as the _Repository URL_ and click `Import`
+  2. On the pop-up, enter [https://github.com/relessawy/rhpam-rhdm-workshop-v1m2-labs-step-2](https://github.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m2-labs-step-2.git) as the _Repository URL_ and click `Import`
 
   3. On the _Import Projects_ screen, select the _ccd-project_ and click `Ok`
 
