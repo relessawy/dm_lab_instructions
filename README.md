@@ -703,7 +703,7 @@ The DMN Editor consists of a number of components:
 
 Follow this step-by-step guide which will guide you through the implementation.
 
-.Input Nodes
+**Input Nodes**
 
 The problem statement describes a number of different inputs to our decision:
 
@@ -712,25 +712,23 @@ The problem statement describes a number of different inputs to our decision:
 
 Therefore, we create 2 input nodes, one for each input:
 
-. Add an **Input** node to the diagram by clicking on the **Input** node icon and placing it in the DRD.
-image:images/add-drd-input-node.png[Input]
+Add an **Input** node to the diagram by clicking on the **Input** node icon and placing it in the DRD.
 
-[start=2]
-. Double-click on the node to set the name. We will name this node `Age`.
-. With the `Age` node selected, open the property panel. Set the **Output data type** to `number`.
+![Input](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-drd-input-node.png)
 
-image:images/drd-input-node-propery-output-data-type.png[Output Data Type]
+Double-click on the node to set the name. We will name this node `Age`.
+With the `Age` node selected, open the property panel. Set the **Output data type** to `number`.
 
-[start=4]
-. In the same way, create an **Input** node for `Years of Service`. This node should also have its **Output data type** set to `number`.
+[Output Data Type](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-input-node-propery-output-data-type.png)
 
-image:images/drd-decision-nodes-complete.png[Output Data Type]
+In the same way, create an **Input** node for `Years of Service`. This node should also have its **Output data type** set to `number`.
 
-[start=5]
-. Save the model.
+[Output Data Type](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-decision-nodes-complete.png)
+
+Save the model.
 
 
-.Constants
+**Constants**
 
 The problem statement describes that every employee receives at least 22 days. So, if no other decisions apply, an employee receives 22 days. This is can be seen as a constant input value into our decision model.
 In DMN we can model such constant inputs with a **Decision** node with a **Literal** boxed expression that defines the constant value:
