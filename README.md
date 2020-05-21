@@ -1,9 +1,9 @@
 Agenda
 ===
 * Use Case Overview
-* Lab 1 Business Object Model
-* Lab 2 Decisions Authoring
-* Lab 3 Decisions as a Service
+* [Lab 1 Business Object Model](https://github.com/relessawy/dm_lab_instructions/blob/master/README.md#lab-1-business-object-model)
+* [Lab 2 Decisions Authoring](https://github.com/relessawy/dm_lab_instructions/blob/master/README.md#lab-2-authoring-decisions-and-rules)
+* [Lab 3 Decisions as a Service](https://github.com/relessawy/dm_lab_instructions/blob/master/README.md#lab-3-decision-services)
 * [Lab 4 Testing a Decision Service](https://github.com/relessawy/dm_lab_instructions/blob/master/README.md#lab-4-testing-your-decision-service)
 * [Lab 5 Decision Model & Notation](https://github.com/relessawy/dm_lab_instructions/blob/master/README.md#lab-5-decision-model--notation)
 
