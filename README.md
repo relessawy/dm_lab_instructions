@@ -653,7 +653,7 @@ We have now successfully tested our decision service. In the next step we will t
 
 # Lab 5 Decision Model & Notation
 
-In this lab we will create a decision that determines the number of vacation days assigned to an employee using Decion Model & Notation (DMN). The number of vacation days depends on age and years of service
+In this lab we will create a decision that determines the number of vacation days assigned to an employee using Decision Model & Notation (DMN). The number of vacation days depends on age and years of service
 
 * Every employee receives at least 22 days.
 * Additional days are provided according to the following criteria:
