@@ -796,18 +796,18 @@ Save the model
 
 The other two decisions can be implemented in the same way. Simply implement the following two decision tables:
 
-image:images/decision-table-case-2.png[Decision Table Case 2]
+![case2](https://github.com/relessawy/dm_lab_instructions/blob/master/images/decision-table-case-2.png)
 
-image:images/decision-table-case-3.png[Decision Table Case 3]
+![case3](https://github.com/relessawy/dm_lab_instructions/blob/master/images/decision-table-case-3.png)
 
-.Total Vacation Days
+**Total Vacation Days**
 
 The total vacation days needs to be determined from the base vacation days and the decisions taken by our 3 decision nodes. As such, we need to create a new Decision node, which takes the output of our 4 Decision nodes (3 decision tables and a literal expression) as input and determines the final output. To do this, we need to:
 
-. Create a new Decision node in the model. Give the node the name `Total Vacation Days` and set its **Output data type** to `number`.
-. Connect the 4 existing Decision nodes to the node. This defines that the output of these nodes will be the input of the next node.
+- Create a new Decision node in the model. Give the node the name `Total Vacation Days` and set its **Output data type** to `number`.
+- Connect the 4 existing Decision nodes to the node. This defines that the output of these nodes will be the input of the next node.
 
-image:images/drd-complete.png[DRD Complete]
+![DRD Complete](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-complete.png)
 
 [start=3]
 . Click on the `Total Vacation Days` node and click on **Edit** to open the expression editor. Configure the expression as a literal exprssion.
