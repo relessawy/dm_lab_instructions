@@ -471,9 +471,7 @@ In this section you will learn:
 2. How can you expose your decisions as a service;
 3. How to use your automated decisions and rules.
 
-In previous labs we have defined the Business Object Model and the rules and decisions that operate on the model. If you've completed the labs in the previous steps, you can use your existing project.
-
-NOTE: _If you'd prefer to start off fresh you can delete your `ccd-project` project and re-import it using this URL: [https://github.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m2-labs-step-3.git](https://github.com/RedHat-Middleware-Workshops/rhpam-rhdm-workshop-v1m2-labs-step-3.git)._
+In previous labs we have defined the Business Object Model and the rules and decisions that operate on the model.
 
 Let's start by having an overview of assets versioning with Business Central.
 
