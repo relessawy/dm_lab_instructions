@@ -69,7 +69,7 @@ So based on this development practice, the first and very important task when au
 
 ## Creating the Card Holder entity
 
-1. To access **Business Central**, go to your OpenShift console tab. Jump to step 2 if you're already logged in. If you're not yet logged in, or have been logged out, log in using these credentials:
+1. To access **Business Central**, go to your OpenShift console ![OpenShift Console](https://console-openshift-console.apps.cluster-melbourne-9a06.melbourne-9a06.example.opentlc.com/k8s/cluster/projects), log in using these credentials:
 
   - user: `userX`{{copy}}
   - password: `openshift`{{copy}}
