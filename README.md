@@ -101,7 +101,7 @@ So based on this development practice, the first and very important task when au
     
 2. Click the Add button to create the project
 
-  This project is your business boundary that encapsulates your business capability. Once the creation of your project is complete, you will see it in your space:
+  This project is your business boundary that encapsulates your business capability. Once the creation of your project is complete, you will see the project Asset view. 
 
 ![Business Central Asset Empty Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-asset-empty-project.png)
 
