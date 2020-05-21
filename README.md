@@ -648,7 +648,7 @@ In order to do that, let's use a simple web-application that we've provided for 
 
 We can see that the `riskRating` has been set to **1** and the transaction is eligible for automated processing. Feel free to test your Decision Service with different values to see if all the use-cases you've implemented in your rules are covered.
 
-We have now successfully tested our decision service. In the next step we will take a closer look at the RESTful API exposed by the service, and we will see how we can test the services via the API documentation page.
+We have now successfully tested our decision service. In the next lab we will take a look at authoring decisons using the DMN standard.
 
 
 # Lab 5 Decision Model & Notation
