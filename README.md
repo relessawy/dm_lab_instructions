@@ -809,143 +809,28 @@ The total vacation days needs to be determined from the base vacation days and t
 
 ![DRD Complete](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-complete.png)
 
-[start=3]
-. Click on the `Total Vacation Days` node and click on **Edit** to open the expression editor. Configure the expression as a literal exprssion.
-. We need to configure the following logic:
-.. Everyone gets the Base Vacation Days.
-.. If both case 1 and case 3 add extra days, only the extra days of one of this decision is added. So, in that case we take the maximum.
-.. If case 2 adds extra days, add them to the total.
-. The above logic  can be implemented with the following FEEL expression:
 
-image:images/total-vacation-days-expression.png[Total Vacation Days Expression]
+Click on the `Total Vacation Days` node and click on **Edit** to open the expression editor. Configure the expression as a literal exprssion.
+- We need to configure the following logic:
+- Everyone gets the Base Vacation Days.
+- If both case 1 and case 3 add extra days, only the extra days of one of this decision is added. So, in that case we take the maximum.
+- If case 2 adds extra days, add them to the total.
+- The above logic  can be implemented with the following FEEL expression:
 
-[start=7]
-. Save the completed model.
+![Total Vacation Days Expression](https://github.com/relessawy/dm_lab_instructions/blob/master/images/total-vacation-days-expression.png)
 
 
-== Deploying the Decision Service
+Save the completed model.
+
+
+**Deploying the Decision Service**
 
 With our decision model completed, we can now package our DMN model in a Deployment Unit (KJAR) and deploy it on the Execution Server. To do this:
 
-. In the bread-crumb navigation in the upper-left corner, click on `vacation-days-decisions` to go back to the project's Library View.
-. Click on the **Deploy** button in the upper-right corner of the screen. This will package our DMN mode in a Deployment Unit (KJAR) and deploy it onto the Execution Server (KIE-Server).
-. Go to the **Execution Servers** perspective by clicking on "Menu -> Deploy -> Execution Servers". You will see the **Deployment Unit** deployed on the Execution Server.
+- In the bread-crumb navigation in the upper-left corner, click on `vacation-days-decisions` to go back to the project's Library View.
+- Click on the **Deploy** button in the upper-right corner of the screen. This will package our DMN mode in a Deployment Unit (KJAR) and deploy it onto the Execution Server (KIE-Server).
+- Go to the **Execution Servers** perspective by clicking on "Menu -> Deploy -> Execution Servers". You will see the **Deployment Unit** deployed on the Execution Server.
 
-== Test DMN Solution
+## Test DMN Solution
 
-In this section, you will test the DMN solution with Execution Server's Swagger interface.
-
-The Swagger interface provides the description and documentation of the Execution Server's RESTful API. At the same time, it allows the APIs to be called from the UI. This enables developers and users to quickly test a, in this case, a deployed DMN Service .
-
-. Navigate to {kie_server}
-. Locate the **DMN Models** section. The DMN API provides the DMN model as a RESTful resources, which accepts 2 operations:
-.. `GET`: Retrieves the DMN model.
-.. `POST`: Evaluates the decisions for a given input.
-. Expand the `GET` operation by clicking on it.
-. Click on the **Try it out** button.
-. Set the **containerId** field to `vacation-days-decisions_1.0.0` and set the **Response content type* to `application/json` and click on **Execute**
-image:images/dmn-swagger-get.png[DMN Swagger Get]
-. If requested, provide the username and password of your **Business Central** and **KIE-Server** user.
-. The response will be the model-description of your DMN model.
-
-Next, we will evaluate our model with some input data. We need to provide our model with the **age** of an employee and the number of **years of service**. Let's try a number of different values to test our deicions.
-
-. Expand the `POST` operation and click on the **Try it out** button
-. Set the **containerId** field to `vacation-days-decisions_1.0.0`. Set the **Parameter content type** and **Response content type** fields to `application/json`.
-. Pass the following request to lookup the number of vacation days for an employee of 16 years old with 1 year of service (note that the namespace of your model is probably different as it is generated. You can lookup the namespace of your model in the response/result of the `GET` operation you executed ealier, which returned the model description).
-```
-{
-  "model-namespace":"https://github.com/kiegroup/drools/kie-dmn/_D0E62587-C08C-42F3-970B-8595EA48BEEE",
-  "model-name":"vacation-days",
-  "decision-name":null,
-  "decision-id":null,
-  "dmn-context":{
-    "Age":16,
-    "Years of Service":1
-  }
-}
-```
-. Click on **Execute**. The result value of the `Total Vacation Days` should be 27.
-. Test the service with a number of other values. See the following table for some sample values and expected output.
-
-|===========
-|Age|Years of Service|Total Vacation Days
-
-|16|1|27
-|25|5|22
-|44|20|24
-|44|30|30
-|50|20|24
-|50|30|30
-|60|20|30
-|===========
-
-
-== Using the KIE-Server Client
-
-Red Hat Decision Manager provides a KIE-Server Client API that allows the user to interact with the KIE-Server from a Java client using a higher level API. It abstracts the data marshalling and unmarshalling and the creation and execution of the RESTful commands from the developer, allowing him/her to focus on developing business logic.
-
-In this section we will create a simple Java client for our DMN model.
-
-. Create a new Maven Java JAR project in your favourite IDE (e.g. IntelliJ, Eclipse, Visual Studio Code).
-. Add the following dependency to your project:
-```
-<dependency>
-  <groupId>org.kie.server</groupId>
-  <artifactId>kie-server-client</artifactId>
-  <version>7.18.0.Final</version>
-  <scope>compile</scope>
-</dependency>
-```
-[start=3]
-. Create a Java package in your `src/main/java` folder with the name `org.kie.dmn.lab`.
-. In the package you've just created, create a Java class called `Main`.
-. Add a `public static void main(String[] args)` method to your main class.
-. Before we implement our method, we first define a number of constants that we will need when implementing our method (note that the values of your constants can be different depending on your environment, model namespace, etc.):
-```
-private static final String KIE_SERVER_URL = "http://localhost:8080/kie-server/services/rest/server";
-private static final String CONTAINER_ID = "vacation-days-decisions_1.0.0";
-private static final String USERNAME = "pamAdmin";
-private static final String PASSWORD = "redhatpam1!";
-private static final String DMN_MODEL_NAMESPACE = "https://github.com/kiegroup/drools/kie-dmn/_D0E62587-C08C-42F3-970B-8595EA48BEEE";
-private static final String DMN_MODEL_NAME = "vacation-days";
-```
-[start=7]
-. KIE-Server client API classes can mostly be retrieved from the `KieServicesFactory` class. We first need to create a `KieServicesConfiguration` instance that will hold our credentials and defines how we want our client to communicate with the server:
-```
-KieServicesConfiguration kieServicesConfig = KieServicesFactory.newRestConfiguration(KIE_SERVER_URL, new EnteredCredentialsProvider(USERNAME, PASSWORD));
-```
-[start=8]
-. Next, we create the `KieServicesClient`:
-```
-KieServicesClient kieServicesClient = KieServicesFactory.newKieServicesClient(kieServicesConfig);
-```
-[start=9]
-. From this client we retrieve our DMNServicesClient:
-```
-DMNServicesClient dmnServicesClient = kieServicesClient.getServicesClient(DMNServicesClient.class);
-```
-[start=10]
-. To pass the input values to our model to the Execution Server, we need to create a `DMNContext`:
-```
-DMNContext dmnContext = dmnServicesClient.newContext();
-dmnContext.set("Age", 16);
-dmnContext.set("Years of Service", 1);
-```
-[start=11]
-. We now have defined all the required instances needed to send a DMN evaluation request to the server:
-```
-ServiceResponse<DMNResult> dmnResultResponse = dmnServicesClient.evaluateAll(CONTAINER_ID, DMN_MODEL_NAMESPACE, DMN_MODEL_NAME, dmnContext);
-```
-[start=12]
-. Finally we can retrieve the DMN evaluation result and print it in the console:
-```
-DMNDecisionResult decisionResult = dmnResultResponse.getResult().getDecisionResultByName("Total Vacation Days");
-System.out.println("Total vacation days: " + decisionResult.getResult());
-```
-[start=13]
-. Compile your project and run it. Observe the output in the console, which should say: **Total vacation days: 27**
-
-The complete project can be found here: https://github.com/DuncanDoyle/vacation-days-dmn-lab-client
-
-
+Now you can test your DMN model similar to what we did in lab 4
