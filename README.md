@@ -719,11 +719,11 @@ Add an **Input** node to the diagram by clicking on the **Input** node icon and 
 Double-click on the node to set the name. We will name this node `Age`.
 With the `Age` node selected, open the property panel. Set the **Output data type** to `number`.
 
-[Output Data Type](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-input-node-propery-output-data-type.png)
+![Output Data Type](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-input-node-propery-output-data-type.png)
 
 In the same way, create an **Input** node for `Years of Service`. This node should also have its **Output data type** set to `number`.
 
-[Output Data Type](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-decision-nodes-complete.png)
+![Output Data Type](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-decision-nodes-complete.png)
 
 Save the model.
 
