@@ -661,20 +661,14 @@ In this lab we will create a decision that determines the number of vacation day
 2. Employees with at least 30 years of service and also employees of age 60 or more, receive 3 extra days, on top of possible additional days already given
 3. If an employee has at least 15 but less than 30 years of service, 2 extra days are given. These 2 days are also provided for employees of age 45 or more. These 2 extra days can not be combined with the 5 extra days.
 
-== Create a Decision Project
-To define and deploy a DMN decision model, we first need to create a new project in which we can store the model. To create a new project:
+## Create a Decision Project
+To define and deploy a DMN decision model, we first need to create a new project in which we can store the model. To create a new project 
 
-. Navigate to {business_central}
-. Login to the platform with the provided username and password.
-. Click on **Design** to navigate to the Design perspective.
+- Click on the home button -> Design -> MySpace
+- Click on the blue Add project button at the top right of the page
+- Give the project the name `vacation-days-decisions`, and the description "Vacation Days Decisions".
 
-image:images/business-central-design.png[]
-
-[start=4]
-. In the Design perspective, create a new project. If your space is empty, this can be done by clicking on the blue **Add Project** button in the center of the page. If you already have projects in your space, you can click on the blue **Add Project** icon at the top right of the page.
-. Give the project the name `vacation-days-decisions`, and the description "Vacation Days Decisions".
-
-image:images/add-project-vacation-days-decisions.png[]
+![Create Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-project-vacation-days-decisions.png]
 
 [start=6]
 . With the project created, we can now create our DMN model. Click on the blue **Add Asset** button.
