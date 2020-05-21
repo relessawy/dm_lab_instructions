@@ -111,7 +111,7 @@ So based on this development practice, the first and very important task when au
 
 1. Select the wizard for _Data Object_ from the catalog to create your business object model for the _Credit Card Holder_ enter the following and Click OK:
 
-  * type `CreditCardHolder`{{copy}} as the name of the object sandbox
+  * type `CreditCardHolder` as the name of the object sandbox
   * select `com.myspace.ccd_project` as the Package.
 
     ![Business Central CCD Object](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-CCD-object-new.png)
@@ -325,11 +325,11 @@ Let's add the Credit Card Holder condition column.
 
 20. Click on the _Description_ cell of the new row and type "_Standard customer low risk_". Use the following values for the other columns:
 
-     - Description:`Standard customer low risk`{{copy}}  
-     - Status:`Standard`{{copy}}  
-     - Minimum Amount:`0`{{copy}}  
-     - Max Amount:`100`{{copy}}  
-     - Risk Scoring:`0`{{copy}}
+     - Description:`Standard customer low risk` 
+     - Status:`Standard` 
+     - Minimum Amount:`0`  
+     - Max Amount:`100` 
+     - Risk Scoring:`0`
 
     Your decision table should look like this. Click Save.
 
@@ -671,7 +671,7 @@ To access the Swagger page of the execution server, we first need to get the URL
 
 ![Swaggger Application JSON](https://github.com/relessawy/dm_lab_instructions/blob/master/images/.png)
 
-6. Next we need to specify the container-id that contains the deployment of the rules that we want to evaluate. The name of our container is `ccd-project_1.0.0-SNAPSHOT`{{copy}}.
+6. Next we need to specify the container-id that contains the deployment of the rules that we want to evaluate. The name of our container is `ccd-project_1.0.0-SNAPSHOT`
 
 7. Finally, we provide the body of the request. In the body we pass the data, based on our domain model or business model, on which we evaluate the rules. Paste the following request body into the *body* text-area in the panel:
 
