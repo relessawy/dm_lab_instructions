@@ -98,6 +98,8 @@ So based on this development practice, the first and very important task when au
 
     *  `ccd-project` as the name of the project, and
     * `Assets to Automate credit card dispute process` as the description of your project.
+    
+2. Click the Add button to create the project
 
   This project is your business boundary that encapsulates your business capability. Once the creation of your project is complete, you will see it in your space:
 
