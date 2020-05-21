@@ -4,7 +4,7 @@ Agenda
 * Lab 1 Business Object Model
 * Lab 2 Decisions Authoring
 * Lab 3 Decisions as a Service
-* Lab 4 Testing a Decision Service
+* [Lab 4 Testing a Decision Service](https://github.com/relessawy/dm_lab_instructions/blob/master/README.md#lab-4-testing-your-decision-service)
 * Lab 5 Decision Model & Notation
 
 <!-- # Use Case Review
