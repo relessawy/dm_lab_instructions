@@ -733,31 +733,29 @@ Save the model.
 The problem statement describes that every employee receives at least 22 days. So, if no other decisions apply, an employee receives 22 days. This is can be seen as a constant input value into our decision model.
 In DMN we can model such constant inputs with a **Decision** node with a **Literal** boxed expression that defines the constant value:
 
-. Add a **Decision** node to the DRD
+Add a **Decision** node to the DRD
 
-image:images/add-drd-decision-node.png[Decision Node]
+![Decision Node](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-drd-decision-node.png)
 
-[start=2]
-. Give the node the name `Base Vacation Days`.
-. Click on the node to select it and open the property panel. Set the node's **Output data type** to `number`.
-. Click on the node and click on the **Edit** icon to open the expression editor.
+- Give the node the name `Base Vacation Days`.
+- Click on the node to select it and open the property panel. Set the node's **Output data type** to `number`.
+- Click on the node and click on the **Edit** icon to open the expression editor.
 
-image:images/drd-decision-node-edit.png[Edit Decision Node]
+![Edit Decision Node](https://github.com/relessawy/dm_lab_instructions/blob/master/images/drd-decision-node-edit.png)
 
-[start=4]
-. In the expression editor, click on the box that says **Select expression** and select **Literal expression**.
+In the expression editor, click on the box that says **Select expression** and select **Literal expression**.
 
-image:images/select-expression.png[Select Expression]
+![Select Expression](https://github.com/relessawy/dm_lab_instructions/blob/master/images/select-expression.png)
 
-[start=5]
-. Simply set the **Literal Expression** to `22`, the number of base vacation days defined in the problem statement.
 
-image:images/base-vacation-days-literal-expression.png[Select Expression]
+Simply set the **Literal Expression** to `22`, the number of base vacation days defined in the problem statement.
 
-[start=6]
-. Save the model.
+![Select Expression](https://github.com/relessawy/dm_lab_instructions/blob/master/images/base-vacation-days-literal-expression.png)
 
-.Decisions
+
+Save the model.
+
+**Decisions**
 
 The problem statement defines 3 decisions which can cause extra days to be given to employees based on various criteria. Let's simply call these decision:
 
@@ -767,22 +765,22 @@ The problem statement defines 3 decisions which can cause extra days to be given
 
 Although these decisions could be implemented in a single decision node, we've decided, in order to improve maintainability of the solution, to define these decisions in 3 separate decision nodes.
 
-. In your DRD, create 3 decision nodes with these given names. Set their **Output data types** to `number`.
-. We need to attach both input nodes, **Age** and **Years of Service** to all 3 decision nodes. We can do this by clicking on an Input node, clicking on its arrow icon, and attaching the arrow to the Decision node.
+In your DRD, create 3 decision nodes with these given names. Set their **Output data types** to `number`.
+We need to attach both input nodes, **Age** and **Years of Service** to all 3 decision nodes. We can do this by clicking on an Input node, clicking on its arrow icon, and attaching the arrow to the Decision node.
 
-image:images/add-drd-three-decision-nodes.png[Select Expression]
+![three_decision_nodes](https://github.com/relessawy/dm_lab_instructions/blob/master/images/add-drd-three-decision-nodes.png)
 
-[start 2]
-. Select the **Extra days case 1** node and open its expression editor by clicking on the **Edit** button.
-. Select the expression **Decision Table** to create a boxed expression implemented as a decision table.
-. The first case defines 2 decisions which can be modelled with 2 rows in our decision table as such:
-.. employees younger than 18 or at least 60 years will receive 5 extra days, or ...
-.. employees with at least 30 years of service will receive 5 extra days
 
-image:images/decision-table-case-1.png[Select Expression]
+Select the **Extra days case 1** node and open its expression editor by clicking on the **Edit** button.
+Select the expression **Decision Table** to create a boxed expression implemented as a decision table.
+The first case defines 2 decisions which can be modelled with 2 rows in our decision table as such:
+employees younger than 18 or at least 60 years will receive 5 extra days, or ...
+employees with at least 30 years of service will receive 5 extra days
 
-[start=5]
-. Note that the **hit-policy** of the decision table is by default set to `U`, which means `Unique`. This implies that only one rule is expected to fire for a given input. In this case however, we would like to set it to `Collect Max`, as, for a given input, multiple decisions might match, but we would like to collect the output from the rule with the highest number of additional vacation days. To do this, click on the `U` in the upper-left corner of the decision table. Now, set the **Hit Policy** to `Collect` and the **Builtin Aggregator** to `MAX`.
+![case1](https://github.com/relessawy/dm_lab_instructions/blob/master/images/decision-table-case-1.png)
+
+
+Note that the **hit-policy** of the decision table is by default set to `U`, which means `Unique`. This implies that only one rule is expected to fire for a given input. In this case however, we would like to set it to `Collect Max`, as, for a given input, multiple decisions might match, but we would like to collect the output from the rule with the highest number of additional vacation days. To do this, click on the `U` in the upper-left corner of the decision table. Now, set the **Hit Policy** to `Collect` and the **Builtin Aggregator** to `MAX`.
 
 image:images/decision-table-hit-policy.png[Decision Table Hit Policy]
  [start=6]
