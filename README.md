@@ -736,7 +736,7 @@ Feel free to test the service with other values for the `CreditCardHolder` and `
 
 This concludes the testing of our service using REST API's to interact directly with the engine.
 
-== Lab 6 Decision Model & Notation
+# Lab 5 Decision Model & Notation
 
 In this lab we will create a decision that determines the number of vacation days assigned to an employee using Decion Model & Notation (DMN). The number of vacation days depends on age and years of service
 
