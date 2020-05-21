@@ -103,10 +103,6 @@ So based on this development practice, the first and very important task when au
 
   This project is your business boundary that encapsulates your business capability. Once the creation of your project is complete, you will see it in your space:
 
-  ![Business Central Asset CCD Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-asset-ccd-project.png)
-
-1. Select the `ccd-project`. You should see the following page with the project content.
-
     ![Business Central Asset Empty Project](https://github.com/relessawy/dm_lab_instructions/blob/master/images/business-central-asset-empty-project.png)
 
 1. Notice there's a blue button called `Add Asset`.  Click on the `Add Asset` button and you will be presented with a catalog of the wizards to create assets.An asset is a business resource of the project like Rules, Processes, Decision Tables, Data Objects, Data Forms, etc._
