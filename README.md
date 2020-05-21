@@ -71,8 +71,8 @@ So based on this development practice, the first and very important task when au
 
 1. To access **Business Central**, go to your [OpenShift Console], log in using these credentials:
 
-  - user: `userX`{{copy}}
-  - password: `openshift`{{copy}}
+  - user: `userX`
+  - password: `openshift`
 
 ![OpenShift Console](https://github.com/relessawy/dm_lab_instructions/blob/master/images/openshift-console.png)
  
