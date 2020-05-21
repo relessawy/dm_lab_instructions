@@ -538,7 +538,7 @@ You will see that the project is first built, meaning the assets are compiled an
 
 Let's check if the service you deployed is available.
 
-1. Go to the Main Menu and select `Deploy`>`Execution Services`.
+1. Go to the Main Menu and select `Deploy`
 
 2. Click on the URL of the container, and a new tab should open:
 
